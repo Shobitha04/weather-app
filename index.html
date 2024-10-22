@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          background-image: url('cloudd.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div id="search-container">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+        <button onclick="getCurrentLocation()">Use Current Location</button>
+        <div id="suggestions"></div>
+    </div>
+    <div id="popular-cities">
+        <h3>Popular Cities:</h3>
+        <button onclick="getWeatherForCity('New York')">New York</button>
+        <button onclick="getWeatherForCity('London')">London</button>
+        <button onclick="getWeatherForCity('Tokyo')">Tokyo</button>
+        <button onclick="getWeatherForCity('Paris')">Paris</button>
+    </div>
+    <div id="weather-info"></div>
+    <div id="map"></div>
+    <div class="hourly-slider" id="hourly-forecast"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>  
