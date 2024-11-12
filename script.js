@@ -126,3 +126,4 @@ function getWeatherForCity(city) {
     cityInput.value = city;
     getWeather();
 }
+
